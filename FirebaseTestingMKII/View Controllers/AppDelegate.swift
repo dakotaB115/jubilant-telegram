@@ -25,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set translucent. (Default value is already true, so this can be removed if desired.)
         UINavigationBar.appearance().isTranslucent = true
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25), NSAttributedString.Key.foregroundColor : UIColor.white]
+        UINavigationBar.appearance().tintColor = UIColor.white
+        let font = UIFont.systemFont(ofSize: 20);
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): font], for: .normal)
         FirebaseApp.configure()
         return true
     }
